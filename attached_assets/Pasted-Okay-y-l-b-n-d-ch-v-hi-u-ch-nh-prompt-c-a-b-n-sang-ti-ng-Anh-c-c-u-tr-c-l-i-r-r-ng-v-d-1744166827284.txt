@@ -1,0 +1,65 @@
+Okay, đây là bản dịch và hiệu chỉnh prompt của bạn sang tiếng Anh, được cấu trúc lại để rõ ràng và dễ hiểu hơn cho AI hoặc nhà phát triển:
+
+English Prompt:
+
+Objective: Create a detailed request specification for building a modern, visually engaging personal portfolio website with a developer-centric theme.
+
+Core Requirements:
+
+Overall Design & Aesthetics:
+
+Modern UI/UX: Clean, intuitive, and up-to-date design principles.
+Developer/Tech Theme: A visual style that subtly reflects a software development background.
+Stunning Effects & Animations: Incorporate smooth, visually appealing animations and transition effects throughout the site, especially for section reveals on scroll.
+Animated Backgrounds: Use subtle, non-distracting animated background elements to add visual interest.
+Key Features:
+
+Dark Mode / Light Mode Toggle: A user-friendly switch to change between dark and light color schemes.
+Language Switcher: Functionality to toggle the website content between English (EN) and Vietnamese (VI).
+Website Structure & Content Sections (in order of appearance):
+
+A. Hero/Introduction Section:
+
+Displays concise general information (e.g., name and title/tagline).
+Features a prominent personal photograph.
+Includes clear links/icons for social media and contact:
+Facebook
+Twitter (or X)
+GitHub
+LinkedIn
+YouTube
+Zalo
+Email
+Phone Number
+Discord
+B. Detailed "About Me" Section:
+
+Provides a more comprehensive personal introduction.
+Include placeholders for: Full Name, Date of Birth/Age, Location, brief bio/personal statement.
+C. Technical Skills Section:
+
+Lists programming languages, frameworks, and tools the user is proficient in.
+(e.g., JavaScript, Python, React, Node.js, Docker, etc. - Provide your specific list here).
+D. Featured Projects Section:
+
+Showcase notable projects.
+Layout: Design this section with a modern, visually appealing layout (e.g., cards, grid).
+Functionality: Each project displayed should clearly link to its corresponding GitHub repository (or live demo link if available) when clicked.
+E. Key Achievements/Highlights Section:
+
+Highlight significant accomplishments, awards, or recognitions.
+Layout: Design this section with a modern and visually distinct layout to make achievements stand out.
+F. Experience Timeline Section:
+
+Presents professional experience or key career milestones in chronological order.
+Layout: Use a clear vertical timeline format.
+Content per Entry: Each point on the timeline should include:
+Month/Year (or Year range)
+Role/Position held or Activity performed during that time.
+Company/Organization (if applicable) or brief description of what was done.
+Interactivity:
+
+Scroll Animations: Each major section (About Me, Skills, Projects, Achievements, Timeline) should animate into view smoothly as the user scrolls down the page.
+Request Summary:
+
+Please generate the necessary code (HTML, CSS, JavaScript) or provide instructions for a web development framework (like React, Vue, Angular) to build a personal portfolio website matching the detailed specifications above. Ensure the design is responsive (works well on desktop, tablet, and mobile) and prioritizes a modern aesthetic with engaging animations and user-friendly features like dark/light mode and language switching.

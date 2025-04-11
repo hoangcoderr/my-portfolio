@@ -1,0 +1,89 @@
+-- Create database
+CREATE DATABASE IF NOT EXISTS portfolio_db;
+USE portfolio_db;
+
+-- Create user_info table
+CREATE TABLE IF NOT EXISTS user_info (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    title VARCHAR(100) NOT NULL,
+    description TEXT,
+    avatar_url VARCHAR(255),
+    email VARCHAR(100),
+    phone VARCHAR(20),
+    location VARCHAR(100),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Create skill_categories table
+CREATE TABLE IF NOT EXISTS skill_categories (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    icon VARCHAR(50) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Create skills table
+CREATE TABLE IF NOT EXISTS skills (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    category_id INT NOT NULL,
+    name VARCHAR(100) NOT NULL,
+    level INT NOT NULL CHECK (level >= 0 AND level <= 100),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (category_id) REFERENCES skill_categories(id) ON DELETE CASCADE
+);
+
+-- Create projects table
+CREATE TABLE IF NOT EXISTS projects (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(100) NOT NULL,
+    type VARCHAR(100) NOT NULL,
+    description TEXT NOT NULL,
+    thumbnail_url VARCHAR(255) NOT NULL,
+    technologies JSON NOT NULL,
+    github_url VARCHAR(255),
+    demo_url VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Create achievements table
+CREATE TABLE IF NOT EXISTS achievements (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(100) NOT NULL,
+    organization VARCHAR(100) NOT NULL,
+    description TEXT NOT NULL,
+    icon VARCHAR(50) NOT NULL,
+    icon_color VARCHAR(50) NOT NULL,
+    bg_color VARCHAR(50) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Create experiences table
+CREATE TABLE IF NOT EXISTS experiences (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    role VARCHAR(100) NOT NULL,
+    company VARCHAR(100) NOT NULL,
+    period VARCHAR(50) NOT NULL,
+    description TEXT NOT NULL,
+    responsibilities JSON NOT NULL,
+    badge_color VARCHAR(100) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Create contact_messages table
+CREATE TABLE IF NOT EXISTS contact_messages (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    subject VARCHAR(200) NOT NULL,
+    message TEXT NOT NULL,
+    is_read BOOLEAN DEFAULT FALSE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+); 
