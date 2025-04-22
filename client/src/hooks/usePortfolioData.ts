@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 
-const API_BASE_URL = 'http://localhost:3000/api/portfolio';
+const API_BASE_URL = 'http://dnh.io.vn:3000/api/portfolio';
 
 export const usePortfolioData = () => {
   const userInfoQuery = useQuery({

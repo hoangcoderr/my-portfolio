@@ -61,10 +61,9 @@ app.use((req, res, next) => {
     serveStatic(app);
   }
 
-  // Đổi 0.0.0.0 -> 127.0.0.1 để tránh lỗi ENOTSUP
-  const host = "127.0.0.1";
+  const host = "0.0.0.0";
 
   server.listen(port, host, () => {
-    log(`serving on http://${host}:${port}`);
+    log(`Server running on http://${host}:${port}`);
   });
 })();
